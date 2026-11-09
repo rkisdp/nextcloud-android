@@ -362,6 +362,7 @@ open class AuthenticatorActivity :
     private fun inflateWebViewLayout(): AccountSetupWebviewBinding =
         AccountSetupWebviewBinding.inflate(layoutInflater).also {
             accountSetupWebviewBinding = it
+            it.root.filterTouchesWhenObscured = true
             setContentView(it.root)
         }
 
